@@ -38,7 +38,7 @@ def bin_search(target, low, high, int_list):  # must use recursion
                 return mid
             elif int_list[mid] < target:
                 return bin_search(target, mid + 1, high, int_list)
-            elif int_list[mid] > target:
-                return bin_search(target, low, mid - 1, int_list)
             else:
-                return None
+                return bin_search(target, low, mid - 1, int_list)
+        else:
+            return None
