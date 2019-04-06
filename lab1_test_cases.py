@@ -26,6 +26,7 @@ class TestLab1(unittest.TestCase):
         low = 0
         high = len(list_val) - 1
         self.assertEqual(bin_search(4, low, high, list_val), 4)  # check if it searches an entire list
+        self.assertEqual(bin_search(15, low, high, list_val), None)
         with self.assertRaises(ValueError):  # test for if list is None
             bin_search(4, low, high, None)
         self.assertEqual(bin_search(4, 0, -1, []), None)  # test for empty list
