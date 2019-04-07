@@ -17,13 +17,10 @@ def reverse_rec(int_list):   # must use recursion
         raise ValueError
     else:
         length = len(int_list)
-        if length == 0:
-            return []
-        else:
-            if length == 1:
-                return int_list
-            # last item + reversal of list up to last item
-            return int_list[length - 1:] + reverse_rec(int_list[:length - 1])
+        if length <= 1:
+            return int_list
+        # last item + reversal of list up to last item
+        return int_list[length - 1:] + reverse_rec(int_list[:length - 1])
 
 
 def bin_search(target, low, high, int_list):  # must use recursion
